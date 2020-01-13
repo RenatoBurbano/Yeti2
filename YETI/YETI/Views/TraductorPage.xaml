@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="http://prismlibrary.com"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="YETI.Views.Traductor">
+             x:Class="YETI.Views.TraductorPage">
 
     <ContentPage.Content>
         <Grid>
@@ -22,7 +22,9 @@
                     <Label
                         Text="Español"
                         Style="{StaticResource Subtitulo}"/>
-                    <Entry/>
+                    <Editor
+                        AutoSize="TextChanges"
+                        Text="{Binding TraductorMD.Entrada}"/>
                     <BoxView/>
 
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
@@ -38,7 +40,16 @@
                     <Label
                         Text="Inglés"
                         Style="{StaticResource Subtitulo}"/>
-                    <Entry/>
+                    <Editor
+                        AutoSize="TextChanges"
+                        IsEnabled="False"
+                        Text="{Binding TraductorMD.Salida, Mode=TwoWay}"/>
+
+
+                    <BoxView/>
+                    <Button
+                        Text="Traducir"
+                        Command="{Binding TraducirCommand}"/>
                 </StackLayout>
 
             </Frame>

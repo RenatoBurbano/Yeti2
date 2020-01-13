@@ -2,9 +2,9 @@
 
 namespace YETI.Views
 {
-    public partial class Traductor : ContentPage
+    public partial class TraductorPage : ContentPage
     {
-        public Traductor()
+        public TraductorPage()
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);

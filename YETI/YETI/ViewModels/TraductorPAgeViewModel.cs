@@ -10,23 +10,26 @@ using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
+using YETI.DTO;
 
 namespace YETI.ViewModels
 {
-    public class TraductorViewModel : ViewModelBase
+    public class TraductorPAgeViewModel : ViewModelBase
     {
         public DelegateCommand TraducirCommand { get; set; }
-        public TraductorViewModel(INavigationService navigationService, IUserDialogs userDialogs)
+        public TraductorMD TraductorMD { get; set; }
+        public TraductorPAgeViewModel(INavigationService navigationService, IUserDialogs userDialogs)
             : base(navigationService)
         {
             _navigationService = navigationService;
             _userDialogs = userDialogs;
+            TraductorMD = new TraductorMD();
             TraducirCommand = new DelegateCommand(Traducir);
         }
 
         private void Traducir()
         {
-            string text="holi", from="es", to="en";
+            string from="es", to="en";
        
             using (_userDialogs.Loading("Cargando"))
             {
@@ -45,7 +48,7 @@ namespace YETI.ViewModels
                     to = tokens[0];
 
                 string url = string.Format(@"http://translate.google.com/translate_a/t?client=j&text={0}&hl=en&sl={1}&tl={2}",
-                                           HttpUtility.UrlEncode(text), from, to);
+                                           HttpUtility.UrlEncode(TraductorMD.Entrada), from, to);
 
                 // Retrieve Translation with HTTP GET call
                 string html = null;
@@ -54,7 +57,7 @@ namespace YETI.ViewModels
                     WebClient web = new WebClient();
 
                     // MUST add a known browser user agent or else response encoding doen't return UTF-8 (WTF Google?)
-                    web.Headers.Add(HttpRequestHeader.UserAgent, "Mozilla/5.0");
+                    web.Headers.Add(HttpRequestHeader.UserAgent, "Google Chrome");
                     web.Headers.Add(HttpRequestHeader.AcceptCharset, "UTF-8");
 
                     // Make sure we have response encoding to UTF-8
@@ -66,18 +69,23 @@ namespace YETI.ViewModels
                     _userDialogs.Alert(e.Message);
                 }
 
-                // Extract out trans":"...[Extracted]...","from the JSON string
-                string result = Regex.Match(html, "trans\":(\".*?\"),\"", RegexOptions.IgnoreCase).Groups[1].Value;
-
-                if (string.IsNullOrEmpty(result))
+                try
                 {
+                    TraductorMD.Salida = Regex.Match(html, "trans\":(\".*?\"),\"", RegexOptions.IgnoreCase).Groups[1].Value;
                 }
+                catch (Exception e)
+                {
+
+                    _userDialogs.Alert(e.Message);
+
+                }
+                // Extract out trans":"...[Extracted]...","from the JSON string
 
                 //return WebUtils.DecodeJsString(result);
 
                 // Result is a JavaScript string so we need to deserialize it properly
                 JavaScriptSerializer ser = new JavaScriptSerializer();
-                string resultado = ser.DeserializeObject(result) as string;
+                TraductorMD.Salida = ser.DeserializeObject(TraductorMD.Salida) as string;
             }
         }
 

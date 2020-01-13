@@ -12,7 +12,7 @@ namespace YETI.Views
 
         private async void Ajustes_Clicked(object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new VocabularioPage());
+            await Navigation.PushAsync(new TraductorPage());
         }
         private async void Vocabulario_Clicked(object sender, System.EventArgs e)
         {
