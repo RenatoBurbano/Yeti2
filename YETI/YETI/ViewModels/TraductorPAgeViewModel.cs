@@ -57,7 +57,7 @@ namespace YETI.ViewModels
                     WebClient web = new WebClient();
 
                     // MUST add a known browser user agent or else response encoding doen't return UTF-8 (WTF Google?)
-                    web.Headers.Add(HttpRequestHeader.UserAgent, "Google Chrome");
+                    web.Headers.Add(HttpRequestHeader.UserAgent, "Chrome/79.0.3945.117");
                     web.Headers.Add(HttpRequestHeader.AcceptCharset, "UTF-8");
 
                     // Make sure we have response encoding to UTF-8
