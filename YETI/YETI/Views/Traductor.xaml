@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="YETI.Views.Traductor">
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="9*"/>
+            </Grid.RowDefinitions>
+
+            <Label
+                Text="Traductor"
+                Style="{StaticResource Titulo}"
+                Grid.Row="0"/>
+
+            <Frame Grid.Row="1">
+                <StackLayout>
+                    <Label
+                        Text="Español"
+                        Style="{StaticResource Subtitulo}"/>
+                    <Entry/>
+                    <BoxView/>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label
+                            Text="ES"/>
+                        <ImageButton
+                            Source="flechas"/>
+                        <Label
+                            Text="EN"/>
+                    </StackLayout>
+
+                    <BoxView/>
+                    <Label
+                        Text="Inglés"
+                        Style="{StaticResource Subtitulo}"/>
+                    <Entry/>
+                </StackLayout>
+
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>

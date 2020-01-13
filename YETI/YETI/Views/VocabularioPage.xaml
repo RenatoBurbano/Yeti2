@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="YETI.Views.VocabularioPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="9*"/>
+            </Grid.RowDefinitions>
+
+            <Label
+                Text="Vocabulario"
+                Style="{StaticResource Titulo}"
+                Grid.Row="0"/>
+
+            <Frame Grid.Row="1">
+                <StackLayout>
+                    <ImageButton
+                        Source="refrescar.png"
+                        BackgroundColor="Transparent"
+                        HeightRequest="25"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            Text="Spanish"
+                            Style="{StaticResource Subtitulo}"/>
+                        <Label
+                            Text="English"
+                            Style="{StaticResource Subtitulo}"
+                            HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            Text="yo"/>
+                        <Label
+                            Text="I"
+                            HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            Text="él"/>
+                        <Label
+                            Text="he"
+                            HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            Text="ella"/>
+                        <Label
+                            Text="she"
+                            HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            Text="Yo soy (estoy) feliz"/>
+                        <Label
+                            Text="I am happy"
+                            HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            Text="Tú eres (estás) feliz"/>
+                        <Label
+                            Text="You are happy"
+                            HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            Text="Nosotros somos (estamos) felices"/>
+                        <Label
+                            Text="We are happy"
+                            HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            Text="lunes"/>
+                        <Label
+                            Text="Monday"
+                            HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            Text="martes"/>
+                        <Label
+                            Text="Tuesday"
+                            HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            Text="miércoles"/>
+                        <Label
+                            Text="Wednesday"
+                            HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            Text="jueves"/>
+                        <Label
+                            Text="Thursday"
+                            HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            Text="viernes"/>
+                        <Label
+                            Text="Friday"
+                            HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            Text="sábado"/>
+                        <Label
+                            Text="Saturday"
+                            HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            Text="domingo"/>
+                        <Label
+                            Text="Sunday"
+                            HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            Text="un día"/>
+                        <Label
+                            Text="a day"
+                            HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            Text="revista"/>
+                        <Label
+                            Text="magazine"
+                            HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            Text="periódico"/>
+                        <Label
+                            Text="newspaper"
+                            HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            Text="bolígrafo"/>
+                        <Label
+                            Text="pencil"
+                            HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            Text="foto"/>
+                        <Label
+                            Text="picture/photo"
+                            HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            Text="concinar"/>
+                        <Label
+                            Text="cook"
+                            HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            Text="bailar"/>
+                        <Label
+                            Text="dance"
+                            HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

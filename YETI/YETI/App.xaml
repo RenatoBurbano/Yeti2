@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Unity;assembly=Prism.Unity.Forms"
+             x:Class="YETI.App">
+	<Application.Resources>
+
+        <ResourceDictionary>
+            <Color x:Key="ColorPrimario">#4E8BC4</Color>
+            <Color x:Key="ColorSecundario">#FFFFFF</Color>
+
+            <Style TargetType="Button">
+                <Setter Property="CornerRadius" Value="8"/>
+                <Setter Property="TextColor" Value="{StaticResource ColorSecundario}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource ColorPrimario}"/>
+                <Setter Property="FontSize" Value="22"/>
+            </Style>
+            
+            <Style TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{StaticResource ColorSecundario}"/>
+                <Setter Property="BorderColor" Value="Transparent"/>
+                <Setter Property="Margin" Value="30,0,30,0"/>
+                <Setter Property="CornerRadius" Value="8"/>
+            </Style>
+
+            <Style TargetType="Grid">
+                <Setter Property="BackgroundColor" Value="{StaticResource ColorPrimario}"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="Titulo">
+                <Setter Property="TextColor" Value="{StaticResource ColorSecundario}"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="Subtitulo">
+                <Setter Property="TextColor" Value="{StaticResource ColorPrimario}"/>
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <Style TargetType="Entry" x:Key="EntryLogin">
+                <Setter Property="FontSize" Value="17"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="Formulario">
+                <Setter Property="TextColor" Value="{StaticResource ColorPrimario}"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <Style TargetType="Entry" x:Key="EntryFormulario">
+                <Setter Property="FontSize" Value="12"/>
+            </Style>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</prism:PrismApplication>
