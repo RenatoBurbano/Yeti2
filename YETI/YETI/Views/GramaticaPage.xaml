@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="YETI.Views.GramaticaPage">
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="9*"/>
+            </Grid.RowDefinitions>
+
+            <Label
+                Text="Gramática"
+                Style="{StaticResource Titulo}"
+                Grid.Row="0"/>
+
+            <Frame Grid.Row="1">
+                <StackLayout>
+                    <ImageButton
+                        Source="refrescar.png"
+                        BackgroundColor="Transparent"
+                        HeightRequest="25"/>
+                    <Label
+                        Text="Verbo To-be"
+                        Style="{StaticResource Subtitulo}"
+                        HorizontalTextAlignment="Center"/>
+                    <Label
+                        Text="El verbo 'To be' tiene una importancia especial en inglés. Se corresponde a los verbos españoles 'ser' y 'estar'. Dependiendo del sentido de la frase deduciremos de cual de los dos se trata."
+                        FontFamily=""
+                        FontAttributes="Italic"
+                        HorizontalTextAlignment="Center"/>
+
+                    <BoxView/>
+
+                    <Label
+                        Text="I am English / Soy inglés"/>
+
+                    <Label
+                        Text="I am in England / Estoy en Inglaterra"/>
+
+                    <BoxView/>
+
+                    <Label
+                        Text="Sirve para expresar la edad, en cuyo caso se traduce por 'tener':"
+                        FontFamily=""
+                        FontAttributes="Italic"
+                        HorizontalTextAlignment="Center"/>
+
+                    <BoxView/>
+                    
+                    <Label
+                        Text="Mary is 20 years old / Maria tiene 20 años"/>
+                    <Label
+                        Text="I am 21 / Yo tengo 21 años"/>
+                    <Label
+                        Text="How old are you? / ¿Cuántos años tienes?"/>
+
+                    <BoxView/>
+
+                    <Button
+                        Text="¿Are you Ready?"
+                        Command="{Binding EjerciciosCommand}"/>
+
+                </StackLayout>
+
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

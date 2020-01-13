@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="YETI.Views.MenuPage">
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.3*"/>
+                <RowDefinition Height="8.7*"/>
+            </Grid.RowDefinitions>
+
+            <Frame Grid.Row="0">
+                <StackLayout Orientation="Horizontal">
+                    <Image
+                        Source="logo2.png"/>
+                    <Picker x:Name="picker"
+                            Title="Nivel"
+                            TitleColor="{StaticResource ColorPrimario}"
+                            HorizontalOptions="EndAndExpand"
+                            WidthRequest="150">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Básico I</x:String>
+                                <x:String>Básico II</x:String>
+                                <x:String>Intermedio I</x:String>
+                                <x:String>Intermedio II</x:String>
+                                <x:String>Avanzado I</x:String>
+                                <x:String>Avanzado II</x:String>
+                                <x:String>Examen Final</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </StackLayout>
+
+            </Frame>
+
+            <Frame Grid.Row="1">
+                <Grid BackgroundColor="Transparent">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="3*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout    
+                        Grid.Column="0"
+                        Grid.Row="0">
+                        
+                        <ImageButton
+                            Clicked="Vocabulario_Clicked"
+                            BackgroundColor="Transparent"
+                            Command="{Binding NavegacionCommmand}"
+                            Source="vocabulario.png"/>
+
+                        <Label
+                            Text="Vocabulario"
+                            HorizontalTextAlignment="Center"
+                            Style="{StaticResource Subtitulo}"/>
+                    </StackLayout>
+
+                    <StackLayout    
+                        Grid.Column="1"
+                        Grid.Row="0">
+
+                        <ImageButton
+                            BackgroundColor="Transparent"
+                            Command="{Binding NavegacionCommmand}"
+                            Clicked="Gramatica_Clicked"
+                            Source="gramatica.png"/>
+
+                        <Label
+                            Text="Gramática"
+                            HorizontalTextAlignment="Center"
+                            Style="{StaticResource Subtitulo}"/>
+                    </StackLayout>
+
+                    <StackLayout    
+                        Grid.Column="0"
+                        Grid.Row="1">
+
+                        <ImageButton
+                            BackgroundColor="Transparent"
+                            Command="{Binding NavegacionCommmand}"
+                            Clicked="Ejercicios_Clicked"
+                            Source="editar.png"/>
+
+                        <Label
+                            Text="Ejercicios"
+                            HorizontalTextAlignment="Center"
+                            Style="{StaticResource Subtitulo}"/>
+                    </StackLayout>
+
+                    <StackLayout    
+                        Grid.Column="1"
+                        Grid.Row="1">
+
+                        <ImageButton
+                            BackgroundColor="Transparent"
+                            Command="{Binding NavegacionCommmand}"
+                            Clicked="Escuchar_Clicked"
+                            Source="oido.png"/>
+
+                        <Label
+                            Text="Escuchar"
+                            HorizontalTextAlignment="Center"
+                            Style="{StaticResource Subtitulo}"/>
+                    </StackLayout>
+
+                    <StackLayout    
+                        Grid.Column="0"
+                        Grid.Row="2">
+
+                        <ImageButton
+                            BackgroundColor="Transparent"
+                            Command="{Binding NavegacionCommmand}"
+                            Clicked="Pruebas_Clicked"
+                            Source="prueba.png"/>
+
+                        <Label
+                            Text="Examen"
+                            HorizontalTextAlignment="Center"
+                            Style="{StaticResource Subtitulo}"/>
+                    </StackLayout>
+
+                    <StackLayout    
+                        Grid.Column="1"
+                        Grid.Row="2">
+
+                        <ImageButton
+                            BackgroundColor="Transparent"
+                            Command="{Binding NavegacionCommmand}"
+                            Clicked="Ajustes_Clicked"
+                            Source="ajustes.png"/>
+
+                        <Label
+                            Text="Ajustes"
+                            HorizontalTextAlignment="Center"
+                            Style="{StaticResource Subtitulo}"/>
+                    </StackLayout>
+                    
+                    <Label
+                        x:Name="Opcion"
+                        Text="{Binding MenuMD.Opcion, Mode=TwoWay}"
+                        IsEnabled="False"
+                        IsVisible="False"/>
+                </Grid>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>

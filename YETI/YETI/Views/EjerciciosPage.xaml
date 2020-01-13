@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             x:Class="YETI.Views.EjerciciosPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="9*"/>
+            </Grid.RowDefinitions>
+
+            <Label
+            Text="Ejercicios"
+            Style="{StaticResource Titulo}"
+            Grid.Row="0"/>
+
+            <Frame Grid.Row="1">
+                <StackLayout>
+                    <ImageButton
+                        Source="refrescar.png"
+                        BackgroundColor="Transparent"
+                        HeightRequest="25"/>
+
+                    <Label
+                        Text="Tradusca la siguiente oración:"
+                        Style="{StaticResource Subtitulo}"/>
+
+                    <Label
+                        Text="Mi nombre es Andres"/>
+                    <Entry
+                        Style="{StaticResource EntryFormulario}"/>
+
+                    <Label
+                        Text="I am from Ecuador"/>
+
+                    <Entry
+                        Style="{StaticResource EntryFormulario}"/>
+
+                    <Label
+                        Text="Yo tengo 14 años"/>
+
+                    <Entry
+                        Style="{StaticResource EntryFormulario}"/>
+
+                    <Label
+                        Text="Elija la respuesta correcta:"
+                        Style="{StaticResource Subtitulo}"/>
+
+                    <Label
+                        Text="She ______ twenty-one years old"/>
+
+                    <input:RadioButtonGroupView
+                        x:Name="rbTipoIdentificacion" 
+                        Orientation="Vertical"
+                        HorizontalOptions="Center">
+
+                        <input:RadioButton
+                            Text="am" 
+                            TextColor="#2961AB"
+                            CircleColor="#2961AB"
+                            Margin="2"
+                            TextFontSize="14"
+                            Color="#2961AB"/>
+
+                        <input:RadioButton
+                            Text="are" 
+                            TextColor="#2961AB"
+                            CircleColor="#2961AB"
+                            TextFontSize="14"
+                            Color="#2961AB"
+                            Margin="2"/>
+
+                        <input:RadioButton
+                            Text="you" 
+                            TextColor="#2961AB"
+                            CircleColor="#2961AB"
+                            TextFontSize="14"
+                            Color="#2961AB"
+                            Margin="2"/>
+
+                        <input:RadioButton
+                            Text="is" 
+                            TextColor="#2961AB"
+                            CircleColor="#2961AB"
+                            TextFontSize="14"
+                            Color="#2961AB"
+                            Margin="2"/>
+
+                    </input:RadioButtonGroupView>
+
+                    <BoxView/>
+
+                    <Button
+                        Text="Verificar Respuestas"/>
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

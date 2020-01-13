@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="YETI.Views.CrearUsuarioPage">
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="9*"/>
+
+            </Grid.RowDefinitions>
+
+            <Label
+            Text="Nuevo Usuario"
+            Style="{StaticResource Titulo}"
+            Grid.Row="0"/>
+
+            <Frame Grid.Row="1">
+                <StackLayout>
+
+                    <Image
+                    Source="logo.png"
+                    HeightRequest="120"/>
+
+                    <BoxView/>
+
+                    <Label
+                    Text="Nombre Completo:"
+                    Style="{StaticResource Formulario}"/>
+
+                    <Entry
+                    Text="{Binding UsuarioMD.NombreCompleto}"
+                    Style="{StaticResource EntryFormulario}"/>
+
+                    <Label
+                    Text="Teléfono:"
+                    Style="{StaticResource Formulario}"/>
+
+                    <Entry
+                    Keyboard="Telephone"
+                    Text="{Binding UsuarioMD.Telefono}"
+                    Style="{StaticResource EntryFormulario}"/>
+
+                    <Label
+                    Text="Nombre de Usuario:"
+                    Style="{StaticResource Formulario}"/>
+
+                    <Entry
+                    Text="{Binding UsuarioMD.NombreUsuario}"
+                    Style="{StaticResource EntryFormulario}"/>
+
+                    <Label
+                    Text="Contraseña"
+                    Style="{StaticResource Formulario}"/>
+
+                    <Entry
+                    Text="{Binding UsuarioMD.Contrasenia}"
+                    IsPassword="True"
+                    Style="{StaticResource EntryFormulario}"/>
+
+                    <Label
+                    Text="Confirmar Contraseña"
+                    Style="{StaticResource Formulario}"/>
+
+                    <Entry
+                    Text="{Binding UsuarioMD.ConfirmarContrasenia}"
+                    IsPassword="True"
+                    Style="{StaticResource EntryFormulario}"/>
+
+                    <Button
+                    Text="Registrar"
+                    Command="{Binding CrearUsuarioCommand}"/>
+                </StackLayout>
+
+            </Frame>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
