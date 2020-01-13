@@ -35,7 +35,7 @@ namespace YETI
             containerRegistry.RegisterForNavigation<VocabularioPage, VocabularioPageViewModel>();
             containerRegistry.RegisterForNavigation<GramaticaPage, GramaticaPageViewModel>();
             containerRegistry.RegisterForNavigation<EjerciciosPage, EjerciciosPageViewModel>();
-            containerRegistry.RegisterForNavigation<TraductorPage, TraductorPAgeViewModel>();
+            containerRegistry.RegisterForNavigation<TraductorPage, TraductorPageViewModel>();
         }
     }
 }

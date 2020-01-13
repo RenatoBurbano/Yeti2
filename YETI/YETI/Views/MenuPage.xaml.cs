@@ -10,7 +10,7 @@ namespace YETI.Views
             NavigationPage.SetHasNavigationBar(this, false);
         }
 
-        private async void Ajustes_Clicked(object sender, System.EventArgs e)
+        private async void Traducir_Clicked(object sender, System.EventArgs e)
         {
             await Navigation.PushAsync(new TraductorPage());
         }

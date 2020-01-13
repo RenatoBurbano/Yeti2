@@ -136,11 +136,11 @@
                         <ImageButton
                             BackgroundColor="Transparent"
                             Command="{Binding NavegacionCommmand}"
-                            Clicked="Ajustes_Clicked"
-                            Source="ajustes.png"/>
+                            Clicked="Traducir_Clicked"
+                            Source="idioma.png"/>
 
                         <Label
-                            Text="Ajustes"
+                            Text="Traducir"
                             HorizontalTextAlignment="Center"
                             Style="{StaticResource Subtitulo}"/>
                     </StackLayout>

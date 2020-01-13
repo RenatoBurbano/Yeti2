@@ -9,6 +9,8 @@ namespace YETI.DTO
     {
         public string Entrada { get; set; }
         public string Salida { get; set; }
+        public string Isalida { get; set; }
+        public string Ientrada { get; set; }
         public bool Seleccion { get; set; }
     }
 }

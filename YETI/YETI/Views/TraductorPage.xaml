@@ -20,31 +20,51 @@
             <Frame Grid.Row="1">
                 <StackLayout>
                     <Label
-                        Text="Español"
+                        x:Name="Ientrada"
+                        Text="ES"
                         Style="{StaticResource Subtitulo}"/>
                     <Editor
                         AutoSize="TextChanges"
                         Text="{Binding TraductorMD.Entrada}"/>
                     <BoxView/>
 
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Grid BackgroundColor="Transparent">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.33*"/>
+                            <ColumnDefinition Width="0.33*"/>
+                            <ColumnDefinition Width="0.33*"/>
+                        </Grid.ColumnDefinitions>
+
                         <Label
-                            Text="ES"/>
+                            Style="{StaticResource Subtitulo}"
+                            Grid.Column="0"
+                            Text="{Binding TraductorMD.Ientrada}"/>
                         <ImageButton
-                            Source="flechas"/>
+                            x:Name="traduccir"
+                            Source="flecha"
+                            BackgroundColor="Transparent"
+                            Grid.Column="1"
+                            Clicked="traduccir_Clicked"
+                            Command="{Binding SeleccionarIdiomaCommand}"/>
                         <Label
-                            Text="EN"/>
+                            Style="{StaticResource Subtitulo}"
+                            Grid.Column="2"
+                            Text="{Binding TraductorMD.Isalida}"/>
+                    </Grid>
+                    <StackLayout Orientation="Horizontal" >
+                        
                     </StackLayout>
 
                     <BoxView/>
                     <Label
-                        Text="Inglés"
+                        x:Name="Isalida"
+                        Text="EN"
                         Style="{StaticResource Subtitulo}"/>
+
                     <Editor
                         AutoSize="TextChanges"
                         IsEnabled="False"
                         Text="{Binding TraductorMD.Salida, Mode=TwoWay}"/>
-
 
                     <BoxView/>
                     <Button
