@@ -41,7 +41,7 @@
                             Text="{Binding TraductorMD.Ientrada}"/>
                         <ImageButton
                             x:Name="traduccir"
-                            Source="flecha"
+                            Source="flechas"
                             BackgroundColor="Transparent"
                             Grid.Column="1"
                             Clicked="traduccir_Clicked"

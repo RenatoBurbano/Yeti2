@@ -7915,7 +7915,7 @@ namespace YETI.Droid
 			public const int editar = 2131165283;
 			
 			// aapt resource value: 0x7F070064
-			public const int flecha = 2131165284;
+			public const int flechas = 2131165284;
 			
 			// aapt resource value: 0x7F070065
 			public const int gramatica = 2131165285;
