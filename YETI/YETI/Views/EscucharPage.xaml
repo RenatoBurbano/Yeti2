@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="http://prismlibrary.com"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="YETI.Views.EscucharPage">
     <ContentPage.Content>
@@ -21,8 +22,9 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="1*"/>
-                        <RowDefinition Height="1*"/>
                         <RowDefinition Height="7*"/>
+                        <RowDefinition Height="1*"/>
+
                     </Grid.RowDefinitions>
 
                     <Label
@@ -30,7 +32,7 @@
                         Grid.Row="0"
                         Style="{StaticResource Subtitulo}"/>
 
-                    <StackLayout Orientation="Horizontal" Grid.Row="2" HorizontalOptions="CenterAndExpand">
+                    <StackLayout Orientation="Horizontal" Grid.Row="1" HorizontalOptions="CenterAndExpand">
                         <ImageButton
                             BackgroundColor="Transparent"
                             Source="play.png"
@@ -45,6 +47,85 @@
                             Source="stop.png"
                             Command="{Binding PararCommand}"/>
                     </StackLayout>
+
+                    <ScrollView Grid.Row="2">
+                        <StackLayout>
+                            <Label
+                            Text="1. What's the name of the airline company?"
+                            Style="{StaticResource Subtitulo}"/>
+
+                            <Entry
+                            Text="{Binding EscucharMD.Answer1}"/>
+
+                            <Label
+                            Text="2. What time does the plane take off?"
+                            Style="{StaticResource Subtitulo}"/>
+
+                            <Entry
+                            Text="{Binding EscucharMD.Answer2}"/>
+
+                            <Label
+                            Text="3. How long is the flight?"
+                            Style="{StaticResource Subtitulo}"/>
+
+                            <Entry
+                            Text="{Binding EscucharMD.Answer3}"/>
+
+                            <Label
+                            Text="4. What countries does the plane fly over?"
+                            Style="{StaticResource Subtitulo}"/>
+
+                            <Entry
+                            Text="{Binding EscucharMD.Answer4}"/>
+
+                            <Label
+                            Text="5. Which of the following is NOT on the lunch menu?"
+                            Style="{StaticResource Subtitulo}"/>
+
+                            <input:RadioButtonGroupView
+                                x:Name="rbListening" 
+                                Orientation="Vertical"
+                                HorizontalOptions="Center">
+
+                                <input:RadioButton
+                                    Text="steak" 
+                                    Margin="2"
+                                    TextFontSize="14"
+                                    Clicked="steak_Clicked"/>
+
+                                <input:RadioButton
+                                    Text="fish" 
+                                    TextFontSize="14"
+                                    Margin="2"
+                                    Clicked="fish_Clicked"/>
+
+                                <input:RadioButton
+                                    Text="chicken" 
+                                    TextFontSize="14"
+                                    Margin="2"
+                                    Clicked="chicken_Clicked"/>
+
+                            </input:RadioButtonGroupView>
+
+                            <Label
+                                x:Name="five"
+                                IsEnabled="False"
+                                IsVisible="False"
+                                Text="{Binding EscucharMD.Answer5, Mode=TwoWay}"/>
+
+                            <Label
+                            Text="6. What is the name of the featured movie?"
+                            Style="{StaticResource Subtitulo}"/>
+                            
+                            <Entry
+                            Text="{Binding EscucharMD.Answer6}"/>
+                        </StackLayout>
+                    </ScrollView>
+
+                    <Button
+                        Text="CHECK"
+                        Grid.Row="3"
+                        Command="{Binding ComprobarCommand}"/>
 
                 </Grid>
             </Frame>
