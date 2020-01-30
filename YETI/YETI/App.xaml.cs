@@ -5,13 +5,14 @@ using YETI.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Acr.UserDialogs;
+using Android.Media;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace YETI
 {
     public partial class App
     {
-
+        public static MediaPlayer player = new MediaPlayer();
         public App() : this(null) { }
 
         public App(IPlatformInitializer initializer) : base(initializer) { }
@@ -36,6 +37,7 @@ namespace YETI
             containerRegistry.RegisterForNavigation<GramaticaPage, GramaticaPageViewModel>();
             containerRegistry.RegisterForNavigation<EjerciciosPage, EjerciciosPageViewModel>();
             containerRegistry.RegisterForNavigation<TraductorPage, TraductorPageViewModel>();
+            containerRegistry.RegisterForNavigation<EscucharPage, EscucharPageViewModel>();
         }
     }
 }

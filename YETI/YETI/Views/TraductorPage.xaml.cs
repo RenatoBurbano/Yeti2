@@ -14,7 +14,7 @@ namespace YETI.Views
         {
             base.OnAppearing();
             Ientrada.Text = "Español";
-            Isalida.Text = "Salida";
+            Isalida.Text = "Inglés";
         }
 
         private void traduccir_Clicked(object sender, System.EventArgs e)

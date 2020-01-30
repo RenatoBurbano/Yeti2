@@ -1,6 +1,7 @@
 ﻿using Acr.UserDialogs;
 using Android.App;
 using Android.Content.PM;
+using Android.Media;
 using Android.OS;
 using Prism;
 using Prism.Ioc;
@@ -12,6 +13,8 @@ namespace YETI.Droid
     [Activity(Label = "YETI", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+
+        MediaPlayer player;
         protected override void OnCreate(Bundle bundle)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
@@ -27,7 +30,9 @@ namespace YETI.Droid
             string rutaCarpeta = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             string ruta = Path.Combine(rutaCarpeta, nombreArchivo);
 
-
+            player = MediaPlayer.Create(this, Resource.Raw.audio1);
+            //player.Start();
+            App.player = this.player;
             LoadApplication(new App(new AndroidInitializer()));
         }
     }
