@@ -10,5 +10,19 @@ namespace YETI.Views
             NavigationPage.SetHasNavigationBar(this, false);
         }
 
+        private void steak_Clicked(object sender, System.EventArgs e)
+        {
+            five.Text = "steak";
+        }
+
+        private void fish_Clicked(object sender, System.EventArgs e)
+        {
+            five.Text = "fish";
+        }
+
+        private void chicken_Clicked(object sender, System.EventArgs e)
+        {
+            five.Text = "chicken";
+        }
     }
 }
