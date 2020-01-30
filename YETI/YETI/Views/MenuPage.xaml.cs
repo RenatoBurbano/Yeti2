@@ -29,7 +29,7 @@ namespace YETI.Views
         }
         private async void Escuchar_Clicked(object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new VocabularioPage());
+            await Navigation.PushAsync(new EscucharPage());
         }
         private async void Pruebas_Clicked(object sender, System.EventArgs e)
         {
