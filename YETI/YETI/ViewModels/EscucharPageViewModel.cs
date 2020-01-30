@@ -14,6 +14,8 @@ namespace YETI.ViewModels
     public class EscucharPageViewModel : ViewModelBase
     {
         public DelegateCommand ReproducirCommand { get; set; }
+        public DelegateCommand PausarCommand { get; set; }
+        public DelegateCommand PararCommand { get; set; }
 
         MediaPlayer player = new MediaPlayer();
 
@@ -24,6 +26,8 @@ namespace YETI.ViewModels
             _userDialogs = userDialogs;
             player = App.player;
             ReproducirCommand = new DelegateCommand(Iniciar);
+            PausarCommand = new DelegateCommand(Pausar);
+            PararCommand = new DelegateCommand(Parar);
         }
         private void Iniciar()
         {
@@ -37,6 +41,35 @@ namespace YETI.ViewModels
             }
 
         }
+
+        private void Pausar()
+        {
+            try
+            {
+                if (player.IsPlaying)
+                    player.Pause();
+            }
+            catch (Exception e)
+            {
+                _userDialogs.Alert(e.Message);
+            }
+
+        }
+
+        private void Parar()
+        {
+            try
+            {
+                player.Stop();
+                player.Reset();
+            }
+            catch (Exception e)
+            {
+                _userDialogs.Alert(e.Message);
+            }
+
+        }
+
         #region Helpers
         private readonly INavigationService _navigationService;
         private readonly IUserDialogs _userDialogs;

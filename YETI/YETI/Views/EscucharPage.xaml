@@ -12,16 +12,41 @@
             </Grid.RowDefinitions>
 
             <Label
-            Text="Escuchar"
+            Text="Listening"
             Style="{StaticResource Titulo}"
             Grid.Row="0"/>
 
             <Frame Grid.Row="1">
-                <StackLayout>
-                    <Button
-                        Text="Reproducir"
-                        Command="{Binding ReproducirCommand}"/>
-                </StackLayout>
+                <Grid BackgroundColor="Transparent">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="7*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Text="Listen and answer the following questions:"
+                        Grid.Row="0"
+                        Style="{StaticResource Subtitulo}"/>
+
+                    <StackLayout Orientation="Horizontal" Grid.Row="2" HorizontalOptions="CenterAndExpand">
+                        <ImageButton
+                            BackgroundColor="Transparent"
+                            Source="play.png"
+                            Command="{Binding ReproducirCommand}"/>
+                        <ImageButton
+                            BackgroundColor="Transparent"
+                            Source="pausa.png"
+                            Command="{Binding PausarCommand}"/>
+
+                        <ImageButton
+                            BackgroundColor="Transparent"
+                            Source="stop.png"
+                            Command="{Binding PararCommand}"/>
+                    </StackLayout>
+
+                </Grid>
             </Frame>
         </Grid>
     </ContentPage.Content>

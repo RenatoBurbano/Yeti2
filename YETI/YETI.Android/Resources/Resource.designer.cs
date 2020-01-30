@@ -8584,28 +8584,37 @@ namespace YETI.Droid
 			public const int oido = 2131165506;
 			
 			// aapt resource value: 0x7F070143
-			public const int prueba = 2131165507;
+			public const int pausa = 2131165507;
 			
 			// aapt resource value: 0x7F070144
-			public const int refrescar = 2131165508;
+			public const int play = 2131165508;
 			
 			// aapt resource value: 0x7F070145
-			public const int roundedbg = 2131165509;
+			public const int prueba = 2131165509;
 			
 			// aapt resource value: 0x7F070146
-			public const int roundedbgdark = 2131165510;
+			public const int refrescar = 2131165510;
 			
 			// aapt resource value: 0x7F070147
-			public const int tooltip_frame_dark = 2131165511;
+			public const int roundedbg = 2131165511;
 			
 			// aapt resource value: 0x7F070148
-			public const int tooltip_frame_light = 2131165512;
+			public const int roundedbgdark = 2131165512;
 			
 			// aapt resource value: 0x7F070149
-			public const int vocabulario = 2131165513;
+			public const int stop = 2131165513;
 			
 			// aapt resource value: 0x7F07014A
-			public const int yeti = 2131165514;
+			public const int tooltip_frame_dark = 2131165514;
+			
+			// aapt resource value: 0x7F07014B
+			public const int tooltip_frame_light = 2131165515;
+			
+			// aapt resource value: 0x7F07014C
+			public const int vocabulario = 2131165516;
+			
+			// aapt resource value: 0x7F07014D
+			public const int yeti = 2131165517;
 			
 			static Drawable()
 			{
