@@ -69,8 +69,8 @@ namespace YETI.ViewModels
         {
             try
             {
-                //player.Stop();
-                //player.Reset();
+                player.Stop();
+                player.Reset();
             }
             catch (Exception e)
             {
