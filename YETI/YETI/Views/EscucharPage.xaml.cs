@@ -22,11 +22,11 @@ namespace YETI.Views
 
         private void chicken_Clicked(object sender, System.EventArgs e)
         {
-            five.Text = "chicken";
-            ASPNetSpell.Html.SpellAsYouType asYouType = new ASPNetSpell.Html.SpellAsYouType();
-            asYouType.getHtml();
-            ASPNetSpell.SpellChecker spellChecker = new ASPNetSpell.SpellChecker();
-            spellChecker.DictionaryPath;
+            //five.Text = "chicken";
+            //ASPNetSpell.Html.SpellAsYouType asYouType = new ASPNetSpell.Html.SpellAsYouType();
+            //asYouType.getHtml();
+            //ASPNetSpell.SpellChecker spellChecker = new ASPNetSpell.SpellChecker();
+            //spellChecker.DictionaryPath;
         }
     }
 }
