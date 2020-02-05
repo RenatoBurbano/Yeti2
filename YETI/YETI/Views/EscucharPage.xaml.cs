@@ -17,12 +17,16 @@ namespace YETI.Views
 
         private void fish_Clicked(object sender, System.EventArgs e)
         {
-            five.Text = "fish";
+            //five.Text = "fish";
         }
 
         private void chicken_Clicked(object sender, System.EventArgs e)
         {
             five.Text = "chicken";
+            ASPNetSpell.Html.SpellAsYouType asYouType = new ASPNetSpell.Html.SpellAsYouType();
+            asYouType.getHtml();
+            ASPNetSpell.SpellChecker spellChecker = new ASPNetSpell.SpellChecker();
+            spellChecker.DictionaryPath;
         }
     }
 }
