@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using MediaManager;
 using Prism;
 using Prism.Ioc;
 using UIKit;
@@ -21,6 +22,7 @@ namespace YETI.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            CrossMediaManager.Current.Init();
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App(new iOSInitializer()));
 

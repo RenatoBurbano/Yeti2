@@ -16,7 +16,7 @@ namespace YETI.Views
         }
         private async void Vocabulario_Clicked(object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new VocabularioPage());
+            await Navigation.PushAsync(new PruebaPage());
         }
 
         private async void Gramatica_Clicked(object sender, System.EventArgs e)

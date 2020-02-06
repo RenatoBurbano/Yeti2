@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:forms="clr-namespace:MediaManager.Forms;assembly=MediaManager.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="YETI.Views.PruebaPage">
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="9*"/>
+            </Grid.RowDefinitions>
+
+            <Label
+            Text="VOCABULARY"
+            Style="{StaticResource Titulo}"
+            Grid.Row="0"/>
+
+            <Frame Grid.Row="1">
+                <StackLayout>
+
+                    <WebView
+                        x:Name="Video"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"/>
+                    <BoxView/>
+                    <WebView
+                        x:Name="Video2"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"/>
+                    <!--<forms:VideoView
+                        WidthRequest="360"
+                        HeightRequest="202"
+                        Source="https://youtu.be/Buky15I1PfM"/>-->
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

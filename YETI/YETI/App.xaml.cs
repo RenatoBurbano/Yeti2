@@ -6,6 +6,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Acr.UserDialogs;
 using Android.Media;
+using MediaManager;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace YETI
@@ -17,9 +18,12 @@ namespace YETI
 
         public App(IPlatformInitializer initializer) : base(initializer) { }
 
+
+
         protected override async void OnInitialized()
         {
             InitializeComponent();
+            CrossMediaManager.Current.Init();
             await NavigationService.NavigateAsync("NavigationPage/MainPage");
         }
 
@@ -38,6 +42,7 @@ namespace YETI
             containerRegistry.RegisterForNavigation<EjerciciosPage, EjerciciosPageViewModel>();
             containerRegistry.RegisterForNavigation<TraductorPage, TraductorPageViewModel>();
             containerRegistry.RegisterForNavigation<EscucharPage, EscucharPageViewModel>();
+            containerRegistry.RegisterForNavigation<PruebaPage, PruebaPageViewModel>();
         }
     }
 }
