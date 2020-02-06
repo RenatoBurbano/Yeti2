@@ -3,6 +3,7 @@ using Android.App;
 using Android.Content.PM;
 using Android.Media;
 using Android.OS;
+using MediaManager;
 using Prism;
 using Prism.Ioc;
 using System.IO;
@@ -23,7 +24,7 @@ namespace YETI.Droid
             UserDialogs.Init(() => this);
 
             base.OnCreate(bundle);
-
+            CrossMediaManager.Current.Init(this);
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             string nombreArchivo = "bd_Usuarios";
